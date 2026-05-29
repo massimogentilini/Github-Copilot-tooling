@@ -377,6 +377,10 @@ code {
   z-index: 1000;
 }
 
+.modal-backdrop[hidden] {
+  display: none;
+}
+
 .modal-card {
   position: relative;
   width: min(720px, 100%);
