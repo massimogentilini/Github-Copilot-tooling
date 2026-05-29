@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A GitHub Pages-ready directory of useful tools, token-saving resources, and MCP servers for GitHub Copilot."
+    />
+    <title>Copilot Resource Hub</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body id="top">
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar" aria-label="Primary">
+          <a class="brand" href="#top">Copilot Resource Hub</a>
+          <div class="section-nav" id="section-nav"></div>
+        </nav>
+
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Static site for GitHub Pages</p>
+            <h1>Useful links and tooling for working better with GitHub Copilot.</h1>
+            <p class="hero-text" id="site-description"></p>
+          </div>
+
+          <aside class="hero-panel" aria-label="Site stats">
+            <div class="stat-grid">
+              <div class="stat-card">
+                <span class="stat-value" id="section-count">0</span>
+                <span class="stat-label">Sections</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value" id="card-count">0</span>
+                <span class="stat-label">Resource cards</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value" id="link-count">0</span>
+                <span class="stat-label">Outbound links</span>
+              </div>
+            </div>
+
+            <div class="hero-note">
+              <span class="note-label">Maintenance</span>
+              <p>
+                Add or edit sections and cards in
+                <code>assets/js/site-data.js</code>. The page layout updates
+                automatically.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <div class="content-stack" id="sections-root"></div>
+      </main>
+
+      <footer class="site-footer">
+        <p>Built as a zero-build static site that can be published directly with GitHub Pages.</p>
+      </footer>
+    </div>
+
+    <div class="modal-backdrop" id="card-modal" hidden>
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button class="modal-close" id="modal-close" type="button" aria-label="Close full card">
+          ×
+        </button>
+
+        <p class="modal-category" id="modal-category"></p>
+        <h2 id="modal-title"></h2>
+        <p class="modal-summary" id="modal-summary"></p>
+        <p class="modal-description" id="modal-description"></p>
+
+        <div class="modal-block">
+          <h3>Best for</h3>
+          <div class="tag-list" id="modal-tags"></div>
+        </div>
+
+        <div class="modal-block">
+          <h3>Why it is useful</h3>
+          <ul class="detail-list" id="modal-highlights"></ul>
+        </div>
+
+        <div class="modal-block">
+          <h3>Links</h3>
+          <div class="button-row" id="modal-links"></div>
+        </div>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="noscript-banner">
+        This site renders its sections from <code>assets/js/site-data.js</code>, so JavaScript needs to
+        be enabled to view the resource cards.
+      </div>
+    </noscript>
+
+    <script src="assets/js/site-data.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
