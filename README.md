@@ -21,3 +21,14 @@ The page navigation, section counts, and cards are generated automatically from 
 ## GitHub Pages
 
 This site has no build step. Publish it directly from the repository root with GitHub Pages.
+
+## Commit helper
+
+Run `.\commit.ps1` from the repository root to:
+
+- ask for a commit message
+- stage all current changes
+- commit on `main`
+- rebase on top of `origin/main`
+- push to `origin/main`
+- print a short recap of the committed files
